@@ -5,12 +5,11 @@ File:       T1E1_pos_neg.py
 Brief:      Ingresar un número y validar
             si es un número positivo, negativo o cero.
 Score:      65
+<<<<<<< HEAD
 Version:    0.1.2
 Fixes:      - Falta la condición de __main__
             - PEP8 recomienda no dejar espacio en blanco entre la
                 condición de if y el carácter de dos puntos ':'
-            - PEP8 recomienda no dejar espacio en blanco entre printf
-                y la apertura del paréntesis '('
 """
 
 if __name__=="__main__":
