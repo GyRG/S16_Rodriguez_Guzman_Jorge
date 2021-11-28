@@ -14,6 +14,7 @@ if __name__ =="__main__":
     from datetime import datetime
     
     fechaActual=datetime.today().strftime('%m-%d')
+    anioActual=datetime.today().strftime('%y')
     
     anio = 0
     mes = 0
@@ -28,7 +29,7 @@ if __name__ =="__main__":
         "Noviembre", "Diciembre"
         ]
     
-    MAX_ANIO = 2021
+    MAX_ANIO = int(anioActual)+2000
     MIN_ANIO = 1900
     MAX_MES = 12
     MIN_MES = 0
