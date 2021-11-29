@@ -12,12 +12,21 @@ Fixes:      -
 """
 
 if __name__ == "__main__":  
+    #Inicialización de variables
     convertion = 0
     lista = []
     listaConvertida = [] 
     valorInicialEntero = 0
     n=0
     longitudNoValidada=True
+    numeroDelElemento=1
+    #Constantes
+    OFFSET_USUARIO = 1
+    BASE = 10
+    contadorLetras=0
+    DEFAULT_CONTADOR=0
+    INCREMENTO_CONTADOR=1
+    APAGAR_CICLO_CONSULTAS = 0
     
     while longitudNoValidada:
         
@@ -29,19 +38,64 @@ if __name__ == "__main__":
             
             for i in range(n):          
                 lista.append(input(f"Introduzca el elemento número "
-                                     f"{i+1} de la lista \n"))
+                                     f"{i+OFFSET_USUARIO} de la lista \n"))
                 if i == n-1:
                     #1. Imprimir elementos y tipos de la lista
                     print(f"lista de elementos inicial: \n {lista}\n")
                     for k in range(n):
-                        print(f"elemento numero {k+1}: \n"
+                        print(f"elemento numero {k+OFFSET_USUARIO}: \n"
                               f" valor: {lista[k]},"
                               f" tipo: {type(lista[k])}")    
                     #2. Cambiar el tipo de todos los elementos a int
                     for j in range(n):
                         listaConvertida.append(valorInicialEntero)
                         for l in str(lista[j]):
-                            listaConvertida[j]+=ord(l)                   
+                            listaConvertida[j]+=ord(l)*BASE**contadorLetras
+                            contadorLetras=+INCREMENTO_CONTADOR
+                        contadorLetras=DEFAULT_CONTADOR
                     longitudNoValidada = False
-            indiceElemento = 1-input("Introduzca el "
-                                     "número de uno de los elementos")
+                    
+            """
+            Con este ciclo while, 
+            se solicita al usuario que introduzca números para 
+            """
+            while numeroDelElemento!=APAGAR_CICLO_CONSULTAS:
+                numeroDelElemento = int(input("Introduzca el "
+                                     "número del elemento "
+                                     "que deseé consultar. \n\n"
+                                     "Introduzca el 0 para terminar "
+                                     "el programa o continúe consultando elementos \n\n\n"))
+                if (numeroDelElemento)<=len(lista):
+                    print(f"Elemento {numeroDelElemento} original : " 
+                          f"{lista[numeroDelElemento-OFFSET_USUARIO]} \t "
+                          f"Tipo : {type(lista[numeroDelElemento-OFFSET_USUARIO])}\n"
+                          f"Elemento {numeroDelElemento} convertido a enteros : "
+                          f"{listaConvertida[numeroDelElemento-OFFSET_USUARIO]} \t "
+                          f"Tipo : {type(listaConvertida[numeroDelElemento-OFFSET_USUARIO])}"
+                          "\n\n\n")
+                else:
+                    print(f"No hay más de {len(lista)} elementos")
+            
+
+            print(f"Lista original: \n {lista}\n\n"
+                  f"Lista convertida: \n{listaConvertida} \n\n\n")
+
+            #4.Ordenar los elementos
+            lista.sort(key = str.lower)
+            listaConvertida.sort()
+            print(f"Lista original Ordenada: \n{lista}\n\n"
+                  f"Lista convertida Ordenada: \n{listaConvertida}\n\n\n")
+            
+            #5.Invertir el ordende los elementos
+ #           lista=lista.sort(reverse=True)
+#            listaConvertida=listaConvertida.sort(reverse=True)
+            lista.sort(reverse=True, key=str.lower)
+            listaConvertida.sort(reverse=True)
+            print(f"Lista original Invertida: \n{lista}\n\n"
+                  f"Lista convertida Invertida: \n{listaConvertida}\n\n\n")
+
+
+            
+                
+                
+            
