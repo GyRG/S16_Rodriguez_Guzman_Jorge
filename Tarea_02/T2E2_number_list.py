@@ -86,7 +86,7 @@ if __name__ == "__main__":
             print(f"Lista original Ordenada: \n{lista}\n\n"
                   f"Lista convertida Ordenada: \n{listaConvertida}\n\n\n")
             
-            #5.Invertir el ordende los elementos
+            #5.Invertir el orden de los elementos
  #           lista=lista.sort(reverse=True)
 #            listaConvertida=listaConvertida.sort(reverse=True)
             lista.sort(reverse=True, key=str.lower)
