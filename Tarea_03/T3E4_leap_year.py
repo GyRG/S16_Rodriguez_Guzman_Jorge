@@ -10,10 +10,6 @@ Fixes:
 
 if __name__ == "__main__":
        
-    anio = 0
-    mes = 0
-    dia = 0
-    
     repetir = True
        
     MESES = (
@@ -37,7 +33,6 @@ if __name__ == "__main__":
     NUM_DIAS_MES_IMPAR = (30,)
     FEBRERO = (2,)
     FREQ_PAR = (2,)
-    MENSAJE_CUMPLEANIOS = ("Estas son las mañanitas ...")
      
      
     def validarFecha(dia,mes,anio,
