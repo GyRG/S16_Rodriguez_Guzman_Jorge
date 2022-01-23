@@ -1,7 +1,5 @@
 import random as rm
 
-
-
 def iniciarJuego(n_usuario):
     BOT_NAME = ("Hal 9000",)
     OPCIONES = ("Ya no Juego :(","Piedra","Papel","Tijera")
@@ -137,7 +135,8 @@ def mensajeGanarPerder(ganador, bot, usr, empate):
                   "Quieres que te de una chancesita o qué",
                   "Creo que me conviene que apostemos",
                   "Hoy estoy de suerte",
-                  "Oh gran "+bot+", deberías comenzar a decirme")
+                  "Oh gran "+bot+", deberías comenzar a decirme",
+                  "Sí, de eso estaba hablandooo!")
     FRASES_USR = ("Oye, pues quién te crees "+usr+"!!",
                   "Estás haciendo trampa, vas a ver !",
                   "Es que se me rompió la rodilla",
