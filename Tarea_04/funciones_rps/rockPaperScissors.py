@@ -89,20 +89,20 @@ def juicioGanador(elecciones,op,bot_name,usr_name,puntos_acumulados,ganando):
               f"    {delantera} va ganando! \n\n\n")
         secuenciaJuego(op,bot_name,usr_name,puntaje,delantera)
     else:
-        despedida = ("Gracias, "
-                     +usr_name+" eso fue divertido!")
+        despedida = ("\nGracias "
+                     +usr_name+", eso fue divertido!")
         if delantera == "":
             despedida = "\n Es una pena, yo sí quería jugar :'( \n"
         else:
             if delantera == stringEmpate[0]:
-                despedida += ("\n Aunque esto no se puede quedar así eh?!, "
+                despedida += ("\nAunque esto no se puede quedar así eh?!, "
                                   "a la próxima tiene que ganar alguien")
             if delantera == bot_name:
-                despedida += ("\n Para la próxima hay que "
+                despedida += ("\nPara la próxima hay que "
                               "apostar para que me invites unos tacos;)")
             if delantera == usr_name:
-                despedida += ("\n Haces mucha trampa, "
-                              "ya verás la próxoma vez "
+                despedida += ("\nHaces mucha trampa, "
+                              "ya verás la próxima vez "
                               "Hasta te voy a dejar sin empleo... XD")
         print(despedida)
 
@@ -143,7 +143,7 @@ def mensajeGanarPerder(ganador, bot, usr, empate):
                   bot+" ha activado el código de auto destrucción en 3.. 2.. 1..",
                   "¿Crees que te voy a dejar seguir ganando?, pues estás mal "+usr,
                   "Ya te crees porque andas de suerte",
-                  "")
+                  "Bájale dos rayitas")
     
     FRASES_EMPATE = ("Ah, por poco eh?!",
                      "Mira qué conveniente empatar ahora",

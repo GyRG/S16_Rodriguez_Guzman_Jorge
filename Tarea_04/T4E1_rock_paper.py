@@ -8,9 +8,9 @@ Score:      -
 Versión:    0.0.1
 Fixes:      -
 """
-from funciones_rps.rockPaperScissors import *
+
+from Tarea_04.funciones_rps.rockPaperScissors import *
 
 if __name__ == "__main__":  
- 
-    iniciarJuego(input("¿Cómo te llamas?: "))
 
+    iniciarJuego(input("¿Cómo te llamas?: "))
