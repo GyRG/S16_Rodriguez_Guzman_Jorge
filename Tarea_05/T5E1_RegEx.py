@@ -14,9 +14,9 @@ from Tarea_05.funciones_validacion.validaciones import *
 
 if __name__ == "__main__":
     
-    ex_reg_email = ''
-    ex_reg_phone = ''
-    ex_reg_CURP = ''
+    ex_reg_email = r'(^[\w]+)@([\w]+)'
+    ex_reg_phone = '^(1?)(?:((\s?\(\d{3}\)\s?|\s?\d{3}\s?)\-?\d{3}\s?\-?\d{4}$))'
+    ex_reg_CURP = r'[A-Z][A-Z][A-Z][A-Z][[0-9][[0-9][[0-9][[0-9][[0-9][[0-9][H|M][A-Z][A-Z][A-Z][A-Z][A-Z][0-9][0-9]'
 
     cuentas = {
         "Jorge317":"jorge@correo",
@@ -31,7 +31,8 @@ if __name__ == "__main__":
     telefonos = [
         '(001)1553110',
         '0011553110',
-        '001-155-3110']
+        '001-155-3110',
+        '000-5555-11']
     
     for telefono in telefonos:
         validacion = validarData(telefono,ex_reg_phone)
@@ -39,7 +40,7 @@ if __name__ == "__main__":
         
     curps = ['MLGL990501PMSRMG05',
              'ROGJ930907HGTDZR02',
-             'KMR671204MLRGZ90']
+             'KMR671204MLRG90']
     
         
     for curp in curps:

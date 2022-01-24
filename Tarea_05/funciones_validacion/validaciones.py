@@ -9,4 +9,5 @@ def validarData(data,ex_reg):
         veredicto = "Datos válidos"
     else: 
         veredicto = "Datos no validos"
+        
     return veredicto
