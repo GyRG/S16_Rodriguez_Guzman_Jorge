@@ -1,15 +1,12 @@
 import re 
-
-def validarCorreoElectronico(correo):
-    validacion = re.search("@",correo)
+def validarData(data,ex_reg):
+    validacion = re.search(
+        ex_reg,
+        data, 
+        re.IGNORECASE)
+    
     if validacion:
-        validacion = correo
+        veredicto = "Datos válidos"
     else: 
-        validacion = correo
-    return validacion
-
-def validarNumeroTelefonico(numero):
-    return numero    
-
-def validarCurp(curp):
-    return curp
+        veredicto = "Datos no validos"
+    return veredicto
