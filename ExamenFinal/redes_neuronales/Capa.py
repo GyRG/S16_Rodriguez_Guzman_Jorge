@@ -1,12 +1,20 @@
-from ExamenFinal.redes_neuronales.perceptron1 import *
+from ExamenFinal.redes_neuronales.Neurona import *
+
 class Capa:
-    def __init__(self,entradas,neuronas,salidas):
+    
+    def __init__(self,entradas,pesos,sesgos):
         self.entradas = entradas
-        self.neuronas = neuronas
-        self.salidas = salidas 
+        self.pesos = pesos
+        self.sesgos = sesgos
         
     def asignacion(self):
-        for n in neuronas:
-            neuronas[n].inputs = Perceptron1(entradas,pesos,sesgos)
+        for s in range(len(self.sesgos)):
+            neuronas[s]= Neurona(self.entradas,self.pesos[s],self.sesgos[s])
+        return neuronas                        
+    def get_salidas(self):
+        neuronas = asignacion()
+        for i in range(len(self.sesgos)):
+            neuronas[i].activacion()
         
+    
     

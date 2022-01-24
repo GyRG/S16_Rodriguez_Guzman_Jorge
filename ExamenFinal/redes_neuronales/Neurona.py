@@ -1,21 +1,21 @@
 import math
 
-class Capa:
+class Neurona:
     
-    def __init__(self, inputs,weights,bias):
-        self.inputs = inputs
-        self.weights = weights
-        self.bias = bias
+    def __init__(self, entradas,pesos,sesgo):
+        self.entradas = entradas
+        self.pesos = pesos
+        self.sesgo = sesgo
         
     
     def sumatoria(self):
         a = 0
-        for i in range(len(self.inputs)):
-            y = self.weights[i]*self.inputs[i]
+        for i in range(len(self.entradas)):
+            y = self.weights[i]*self.entradas[i]
             print(f"\n{y}\n")
             a = a + y
             #print(f"\n{a}\n")
-        return a + self.bias
+        return a + self.sesgo
     
     def activacion(self):
         a = self.sumatoria()
