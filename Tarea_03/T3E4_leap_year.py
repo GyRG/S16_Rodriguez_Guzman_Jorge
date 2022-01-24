@@ -3,8 +3,8 @@ Date:     2021-01-26
 Authors:  Jorge Luis Rodríguez Guzmán
 File:     T3E4_leap_year.py
 Brief:    Este programa valida si una fecha es válida
-Score:    90
-Version:  1.2.3
+Score:    -
+Version:  0.0.1
 Fixes:    
 """
 
