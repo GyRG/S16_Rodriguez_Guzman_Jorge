@@ -2,13 +2,22 @@
 Date:       2021-11-26
 Authors:    Jorge Luis Rodríguez Guzmán
 File:       T2E2_number_list.py
-Brief:      Este programa solicita al usuario 
+Brief:      Este programa solicita al usuario
             que se introduzca un número entero
-            el cual servirá de longitud para 
-            la introducción de una lista de elementos 
-Score:      -
-Versión:    0.0.1
-Fixes:      -
+            el cual servirá de longitud para
+            la introducción de una lista de elementos
+Score:      85
+Versión:    1.1.1
+Fixes:      - Falto la captura en el README.md
+
+            - En general esta bien solo que la conversion
+            a enteros que solicite solo era castear a enteros
+            int(value), ya que la funcion ord que usas retorna
+            el valor UNICODE equivalente.
+
+            - Trata de solo usar los espacios necesarios con el
+            salto de linea, la terminal se puede volver un poco
+            díficil de leer si los usas en exceso.
 """
 
 if __name__ == "__main__":  
