@@ -4,10 +4,16 @@ Authors:    Jorge Luis Rodríguez Guzmán
 File:       T2E1_test_list.py
 Brief:      Este programa modifica el contenido de una lista
             e imprime los resultados de cada modificación
-Score:      -
-Versión:    0.0.1
-Fixes:      -
+Score:      100
+Versión:    1.1.1
+Fixes:      Excelente, el uso de constantes es correcto
+            quiza no es lo más legible, pero funcionalmente
+            es la mejor práctica, puedes usar variables
+            normales con mayusculas cuando sea más importante
+            colborar con otros haciendo buen uso del
+            encapsulamiento.
 """
+
 if __name__ == '__main__':
     MIXTURA = (5,)
     OMITIBLE = (2,)
