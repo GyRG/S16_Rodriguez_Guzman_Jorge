@@ -18,17 +18,36 @@ if __name__ == "__main__":
     entradas = [7,21,-10]
     pesos = [-2,4.5,8.2]
     sesgo = 0.5
+    
+    ejercicio1 = Neurona(entradas,pesos,sesgo)
+    
+    print("Salida del perceptron del ejercicio1: \n"
+          +str(ejercicio1.activacion()))
+    
+    entradas_c1 = [0.1,0.5]
+    pesos_c1 = [
+        [-4.8,4.6],#Pesos de la neurona 1
+        [5.1,-5.2] #Pesos neurona 2
+        ]
+    
+    sesgos_c1 = [-2.6,3.2]
+
+    
+    capa1 = Capa(entradas_c1,pesos_c1,sesgos_c1)
+    #capa1.asignacion()
+    
         
-    #ejercicio1 = Neurona(entradas,pesos,sesgo)
+    entradas_c2 = capa1.salidas
+    pesos_c2 = [
+        [5.9,-5.2] 
+    #solo un arreglo de pesos al tratarse de una neurona solamente
+        ]
+    sesgos_c2 = [0.5]
     
-    #print(ejercicio1.activacion())
+    capa2 = Capa(entradas_c2,pesos_c2,sesgos_c2)
     
-    entradas_1 = [0.1,0.5]
-    pesos_1 = [[-4.8,4.6],[5.1,-5.2]]
-    sesgos_1 = [-2.6,3.2,-1.3]
-    capa1 = Capa(entradas_1,pesos_1,sesgos_1)
-    
-    capa1.asignacion()
-    
-    
+    print("\nSalida del perceptron del ejecicio 2\n")
+    print("Primera capa: "+str(capa1.salidas))
+    print("\nResultado final tras la segunda capa de neuronas: "+str(capa2.salidas))
+
     

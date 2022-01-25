@@ -6,15 +6,28 @@ class Capa:
         self.entradas = entradas
         self.pesos = pesos
         self.sesgos = sesgos
+        self.neuronas = self.inicializar_neuronas()
+        self.salidas = self.activacion_neuronas()
         
-    def asignacion(self):
-        for s in range(len(self.sesgos)):
-            neuronas[s]= Neurona(self.entradas,self.pesos[s],self.sesgos[s])
-        return neuronas                        
-    def get_salidas(self):
-        neuronas = asignacion()
+        
+    def inicializar_neuronas(self):
+        neuronas=[]
         for i in range(len(self.sesgos)):
-            neuronas[i].activacion()
+            neuronas.append(
+                Neurona(
+                    self.entradas,
+                    self.pesos[i],
+                    self.sesgos[i])
+                )
+        return neuronas
+                        
+    def activacion_neuronas(self):
+        salidas = []
+        for i in range(len(self.sesgos)):
+            salidas.append(
+                self.neuronas[i].activacion()
+                )
+        return salidas
         
     
     
